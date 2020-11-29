@@ -1,4 +1,59 @@
+/* Base Styles */
+
+:root {
+	--primary-bg-color: #bf514c;
+	--secondary-bg-color: #7584b5;
+	--accent-bg-color: #e8e8eb;
+}
+
 * {
 	box-sizing: border-box;
 	font-family: 'Karla', 'Montserrat', sans-serif;
+}
+
+h1 {
+	margin: 0;
+}
+
+/* Layout Styles */
+
+.main-header,
+.main-footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+}
+
+.main-content,
+.about {
+	height: calc(100vh - 100px);
+}
+
+/* Class Styles */
+
+.main-header {
+	background-color: var(--accent-bg-color);
+}
+
+.title {
+	margin: 0;
+	font-size: 1.2rem;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+.projects {
+	transform: translateX(-100vw);
+	background-color: var(--primary-bg-color);
+}
+
+.resume {
+	transform: translateX(100vw);
+	background-color: var(--secondary-bg-color);
+}
+
+.projects,
+.resume {
+	display: none;
 }
