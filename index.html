@@ -31,11 +31,9 @@
 	<body>
 		<header class="main-header">
 			<!-- Nav -->
-			<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+			<nav class="navbar navbar-expand-md navbar-dark fixed-top">
 				<div class="container">
-					<a class="navbar-brand font-weight-light" href="#top"
-						>Bryant Vaughn</a
-					>
+					<a class="navbar-brand" href="#top">Bryant Vaughn</a>
 					<button
 						class="navbar-toggler"
 						type="button"
@@ -60,18 +58,17 @@
 		</header>
 
 		<main>
-			<div class="jumbotron jumbotron-fluid text-center mt-4">
+			<!-- Jumbotron -->
+			<div class="jumbotron jumbotron-fluid text-center">
 				<div class="container">
-					<h1 class="display-4 m-0">Hello, World!</h1>
+					<h1 class="m-0">Hello, World!</h1>
 					<img
 						class="profile-img my-4"
 						src="img/me.jpg"
 						alt="Picture of Bryant Vaughn"
 					/>
 					<h3 class="mb-3 name">Bryant Vaughn</h3>
-					<h5 class="mb-5 details">
-						Developer <span>|</span> Learner <span>|</span> Dog Person
-					</h5>
+					<h5 class="mb-5 details">Developer | Learner | Dog Person</h5>
 				</div>
 				<div class="down-arrow">
 					<a href="#about">
@@ -86,7 +83,56 @@
 					</a>
 				</div>
 			</div>
-			<div class="container"></div>
+			<!-- /Jumbotron -->
+			<div class="container main-content py-4">
+				<section class="pb-4 content-section" id="about">
+					<h3 class="section-title">About</h3>
+					<p class="bio mb-0">
+						Hi, I'm Bryant, a computer science graduate with a passion for
+						software development and technology. I live in Denver, CO, The Mile
+						High city, but I'm originally from Northern California. In my spare
+						time I enjoy learning, tinkering with new tech or electronics, and
+						exploring different areas around Colorado.
+					</p>
+				</section>
+				<section class="py-4 content-section" id="projects">
+					<h3 class="section-title">Projects</h3>
+					<div class="container">
+						<div class="row">
+							<div class="card col-sm-12 col-md-6 col-lg-4 px-0">
+								<img
+									src="img/reactColors.png"
+									class="card-img-top"
+									alt="React Colors App"
+								/>
+								<div class="card-body">
+									<h5 class="card-title">React Colors</h5>
+									<p class="card-text">
+										This is a clone of the Material UI Colors application I
+										built using React. It includes 9 demo palettes and allows
+										users to create their own and stores them with local browser
+										storage.
+									</p>
+									<a
+										href="https://color-palette.bryantvaughn.now.sh/"
+										target="_blank"
+										class="btn btn-outline-* visit mb-2"
+									>
+										Visit
+									</a>
+									<a
+										href="https://github.com/BryantVaughn/color-palette"
+										target="_blank"
+										class="btn btn-outline-* repo"
+									>
+										Repo
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
 		</main>
 
 		<!-- jQuery, Popper.js, and Bootstrap JS -->
