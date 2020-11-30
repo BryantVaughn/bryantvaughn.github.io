@@ -29,11 +29,13 @@
 		<title>Bryant Vaughn</title>
 	</head>
 	<body>
-		<header>
+		<header class="main-header">
 			<!-- Nav -->
-			<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+			<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
 				<div class="container">
-					<a class="navbar-brand" href="#">Bryant Vaughn</a>
+					<a class="navbar-brand font-weight-light" href="#top"
+						>Bryant Vaughn</a
+					>
 					<button
 						class="navbar-toggler"
 						type="button"
@@ -48,8 +50,8 @@
 					<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 						<div class="navbar-nav ml-auto">
 							<a class="nav-link" href="#about">About</a>
-							<a class="nav-link ml-2" href="#">Projects</a>
-							<a class="nav-link ml-2" href="#">Contact</a>
+							<a class="nav-link" href="#projects">Projects</a>
+							<a class="nav-link" href="#contact">Contact</a>
 						</div>
 					</div>
 				</div>
@@ -57,7 +59,35 @@
 			<!-- /Nav -->
 		</header>
 
-		<main></main>
+		<main>
+			<div class="jumbotron jumbotron-fluid text-center mt-4">
+				<div class="container">
+					<h1 class="display-4 m-0">Hello, World!</h1>
+					<img
+						class="profile-img my-4"
+						src="img/me.jpg"
+						alt="Picture of Bryant Vaughn"
+					/>
+					<h3 class="mb-3 name">Bryant Vaughn</h3>
+					<h5 class="mb-5 details">
+						Developer <span>|</span> Learner <span>|</span> Dog Person
+					</h5>
+				</div>
+				<div class="down-arrow">
+					<a href="#about">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 490.656 490.656"
+						>
+							<path
+								d="M487.536 120.445c-4.16-4.16-10.923-4.16-15.083 0L245.339 347.581 18.203 120.467c-4.16-4.16-10.923-4.16-15.083 0s-4.16 10.923 0 15.083l234.667 234.667c2.091 2.069 4.821 3.115 7.552 3.115s5.461-1.045 7.531-3.136l234.667-234.667c4.159-4.161 4.159-10.924-.001-15.084z"
+							/>
+						</svg>
+					</a>
+				</div>
+			</div>
+			<div class="container"></div>
+		</main>
 
 		<!-- jQuery, Popper.js, and Bootstrap JS -->
 		<script
