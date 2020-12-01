@@ -11,8 +11,7 @@ const projects = [
 		tech: ['React', 'JS', 'CSS', 'Material_UI'],
 		githubURL: 'https://github.com/BryantVaughn/color-palette',
 		liveURL: 'https://color-palette.bryantvaughn.now.sh/',
-		id: 1,
-		shown: true
+		id: 1
 	},
 	{
 		title: 'JS Calculator',
@@ -22,8 +21,7 @@ const projects = [
 		tech: ['HTML', 'CSS', 'JS'],
 		githubURL: 'https://github.com/BryantVaughn/calculator',
 		liveURL: 'https://calculator.bryantvaughn.vercel.app/',
-		id: 2,
-		shown: true
+		id: 2
 	},
 	{
 		title: 'Etch-A-Sketch',
@@ -33,8 +31,7 @@ const projects = [
 		tech: ['HTML', 'CSS', 'JS'],
 		githubURL: 'https://github.com/BryantVaughn/Etch-A-Sketch',
 		liveURL: 'https://bryantvaughn.github.io/Etch-A-Sketch/',
-		id: 3,
-		shown: true
+		id: 3
 	},
 	{
 		title: 'Employee Directory',
@@ -44,8 +41,7 @@ const projects = [
 		tech: ['HTML', 'CSS', 'JS'],
 		githubURL: 'https://github.com/BryantVaughn/demo-employee-directory',
 		liveURL: 'https://bryantvaughn.github.io/demo-employee-directory/',
-		id: 4,
-		shown: true
+		id: 4
 	},
 	{
 		title: 'Wheel of Success',
@@ -55,8 +51,7 @@ const projects = [
 		tech: ['HTML', 'CSS', 'JS'],
 		githubURL: 'https://github.com/BryantVaughn/wheel-of-success',
 		liveURL: 'https://bryantvaughn.github.io/wheel-of-success/',
-		id: 5,
-		shown: true
+		id: 5
 	},
 	{
 		title: 'Grocery List',
@@ -66,8 +61,7 @@ const projects = [
 		tech: ['React', 'Hooks', 'JS', 'CSS', 'Material_UI'],
 		githubURL: 'https://github.com/BryantVaughn/grocery-list',
 		liveUrl: 'https://grocery-list.bryantvaughn.now.sh/',
-		id: 6,
-		shown: true
+		id: 6
 	}
 ];
 
@@ -78,13 +72,26 @@ function buildCard(project) {
 	const img = createElement('img', 'card-img-top');
 	img.alt = `${project.title} App`;
 	img.src = `${project.img}`;
-	console.log(img);
+	const cardBody = createElement('div', 'card-body');
+
+	// Create components of card body
+	const title = createElement('h5', 'card-title');
+	title.textContent = `${project.title}`;
+
+	const description = createElement('p', 'card-text');
+	description.textContent = `${project.desc}`;
 }
 
 function createElement(element, className) {
 	const newElement = document.createElement(element);
 	newElement.className = className;
 	return newElement;
+}
+
+function appendItems(parentNode, items) {
+	items.forEach((item) => {
+		parentNode.appendChild(item);
+	});
 }
 
 // Event callbacks
