@@ -5,6 +5,9 @@
 	--secondary-color: #393a73;
 	--accent-color: #f8f3e6;
 	--white: #fff;
+	--large-font-size: 3rem;
+	--medium-font-size: 1.5rem;
+	--small-font-size: 1rem;
 }
 
 * {
@@ -26,7 +29,9 @@ main .jumbotron {
 .main-header .navbar,
 main .jumbotron h1,
 main .jumbotron .name,
-main .jumbotron .details {
+main .jumbotron .details,
+.content-section .bio,
+.card .card-body .card-text {
 	font-weight: 300;
 }
 
@@ -48,7 +53,7 @@ main .jumbotron {
 }
 
 main .jumbotron h1 {
-	font-size: 3rem;
+	font-size: var(--large-font-size);
 }
 
 .profile-img {
@@ -84,7 +89,7 @@ main .jumbotron h1 {
 }
 
 .section-title {
-	font-size: 1.5rem;
+	font-size: var(--medium-font-size);
 	font-weight: 400;
 }
 
@@ -96,6 +101,23 @@ main .jumbotron h1 {
 .card {
 	padding-left: 0;
 	padding-right: 0;
+	margin-top: 1rem;
+}
+
+.card .card-img-top {
+	width: 100%;
+	height: 30%;
+	object-fit: cover;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.card .card-body .card-title {
+	font-size: var(--medium-font-size);
+}
+
+.card .card-body .card-text {
+	font-size: var(--small-font-size);
+	line-height: 1.2;
 }
 
 .card .card-body .card-title,

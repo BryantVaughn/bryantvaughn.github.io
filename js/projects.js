@@ -60,7 +60,7 @@ const projects = [
 			'This is a grocery list app I built to practice with React Hooks for state management. I designed this app for mobile devices so you can use it while shopping at the store. It utilizes browser storage so you can make your list beforehand, then access it when shopping.',
 		tech: ['React', 'Hooks', 'JS', 'CSS', 'Material_UI'],
 		githubURL: 'https://github.com/BryantVaughn/grocery-list',
-		liveUrl: 'https://grocery-list.bryantvaughn.now.sh/',
+		liveURL: 'https://grocery-list.bryantvaughn.now.sh/',
 		id: 6
 	}
 ];
@@ -68,24 +68,57 @@ const projects = [
 // Helper Functions
 function buildCard(project) {
 	// Create components of card
-	const cardDiv = createElement('div', 'card col-sm-12 col-md-6 col-lg-4');
+	const cardDiv = createElement('div', 'card col-12 col-md-6 col-lg-4');
 	const img = createElement('img', 'card-img-top');
 	img.alt = `${project.title} App`;
 	img.src = `${project.img}`;
-	const cardBody = createElement('div', 'card-body');
+	const cardBody = createElement('div', 'card-body d-flex flex-column');
 
 	// Create components of card body
-	const title = createElement('h5', 'card-title');
-	title.textContent = `${project.title}`;
+	const title = addTextContent(
+		createElement('h5', 'card-title'),
+		`${project.title}`
+	);
+	const description = addTextContent(
+		createElement('p', 'card-text'),
+		`${project.desc}`
+	);
+	const visitBtn = configureBtn(
+		createElement('a', 'btn btn-sm btn-outline-* visit mt-auto mb-2'),
+		`${project.liveURL}`
+	);
+	const githubBtn = configureBtn(
+		createElement('a', 'btn btn-sm btn-outline-* repo'),
+		`${project.githubURL}`
+	);
+	addTextContent(visitBtn, 'Visit');
+	addTextContent(githubBtn, 'Repo');
 
-	const description = createElement('p', 'card-text');
-	description.textContent = `${project.desc}`;
+	// Append items to body and card
+	const bodyItems = [title, description, visitBtn, githubBtn];
+	appendItems(cardBody, bodyItems);
+
+	const cardItems = [img, cardBody];
+	appendItems(cardDiv, cardItems);
+
+	return cardDiv;
 }
 
 function createElement(element, className) {
 	const newElement = document.createElement(element);
 	newElement.className = className;
 	return newElement;
+}
+
+function configureBtn(btn, href) {
+	btn.href = href;
+	btn.target = '_blank';
+	return btn;
+}
+
+function addTextContent(element, text) {
+	element.textContent = text;
+	return element;
 }
 
 function appendItems(parentNode, items) {
@@ -98,6 +131,7 @@ function appendItems(parentNode, items) {
 function addProjectCards() {
 	projects.map((project) => {
 		const card = buildCard(project);
+		appendItems(row, [card]);
 	});
 }
 
