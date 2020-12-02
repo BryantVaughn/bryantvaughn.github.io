@@ -68,7 +68,8 @@ const projects = [
 // Helper Functions
 function buildCard(project) {
 	// Create components of card
-	const cardDiv = createElement('div', 'card col-12 col-md-6 col-lg-4');
+	const colDiv = createElement('div', 'col-12 col-md-6 col-lg-4');
+	const cardDiv = createElement('div', 'card');
 	const img = createElement('img', 'card-img-top');
 	img.alt = `${project.title} App`;
 	img.src = `${project.img}`;
@@ -94,14 +95,16 @@ function buildCard(project) {
 	addTextContent(visitBtn, 'Visit');
 	addTextContent(githubBtn, 'Repo');
 
-	// Append items to body and card
+	// Append items to card and col
 	const bodyItems = [title, description, visitBtn, githubBtn];
 	appendItems(cardBody, bodyItems);
 
 	const cardItems = [img, cardBody];
 	appendItems(cardDiv, cardItems);
 
-	return cardDiv;
+	appendItems(colDiv, [cardDiv]);
+
+	return colDiv;
 }
 
 function createElement(element, className) {

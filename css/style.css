@@ -6,6 +6,7 @@
 	--secondary-color-light: #a4a5d2;
 	--accent-color: #f8f3e6;
 	--white: #fff;
+	--xxl-font-size: 4rem;
 	--xl-font-size: 3rem;
 	--large-font-size: 2rem;
 	--medium-font-size: 1.5rem;
@@ -16,6 +17,10 @@
 * {
 	box-sizing: border-box;
 	font-family: 'Karla', 'Montserrat', sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 body {
@@ -63,10 +68,15 @@ main .jumbotron h1 {
 }
 
 .profile-img {
+	margin: 1.5rem 0;
 	height: 180px;
 	width: 180px;
 	border-radius: 50%;
 	border: 3px solid var(--accent-color);
+}
+
+main .jumbotron .name {
+	margin-bottom: 1rem;
 }
 
 .down-arrow {
@@ -90,8 +100,8 @@ main .jumbotron h1 {
 	color: var(--secondary-color);
 }
 
-.content-section {
-	border-bottom: 1px solid var(--secondary-color);
+.content-section:first-of-type {
+	border-bottom: 1px solid var(--secondary-color-light);
 }
 
 .section-title {
@@ -102,6 +112,17 @@ main .jumbotron h1 {
 .bio {
 	margin: 1rem 0;
 	line-height: 1.5;
+}
+
+#about .resume {
+	background-color: var(--primary-color);
+	border-color: var(--primary-color);
+	color: var(--accent-color);
+	transition: all 0.2s ease-out;
+}
+#about .resume:hover {
+	background-color: var(--white);
+	color: var(--primary-color);
 }
 
 .card {
@@ -134,13 +155,13 @@ main .jumbotron h1 {
 .card .card-body .repo {
 	color: var(--secondary-color);
 }
-.card .card-body a {
+.card .card-body a,
+#about .resume {
 	width: 100%;
 	font-weight: 500;
 }
 .card .card-body .visit {
 	border-color: var(--primary-color);
-	transition: all 0.3s ease-out;
 }
 .card .card-body .repo {
 	border-color: var(--secondary-color);
@@ -169,8 +190,69 @@ main .jumbotron h1 {
 	text-decoration: none;
 }
 
+.main-footer a,
+.main-footer .icon {
+	transition: opacity 0.3s ease-out;
+}
+
 .main-footer .icon {
 	fill: var(--accent-color);
+}
+
+.main-footer a:hover,
+.main-footer .icon:hover {
+	opacity: 0.6;
+}
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+	/* Jumbotron Styles */
+	main .jumbotron {
+		min-height: 900px;
+	}
+
+	.jumbotron .container-lg {
+		padding-top: 5rem;
+	}
+
+	main .jumbotron h1 {
+		font-size: var(--xxl-font-size);
+	}
+
+	main .jumbotron .profile-img {
+		margin-top: 2.5rem;
+		margin-bottom: 2.5rem;
+		width: 250px;
+		height: 250px;
+	}
+
+	main .jumbotron .name {
+		font-size: var(--xl-font-size);
+		margin-bottom: 2rem;
+	}
+
+	.content-section .bio,
+	#about .resume {
+		width: 70%;
+		margin: 1.5rem auto;
+	}
+
+	.content-section .bio {
+		font-size: var(--small-font-size);
+	}
+
+	#about .resume-title {
+		display: none;
+	}
+
+	/* Project Styles */
+	.card {
+		min-height: 525px;
+	}
+	.card .card-img-top {
+		height: 40%;
+	}
 }
 
 /* Animation Keyframes */
