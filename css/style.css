@@ -3,11 +3,14 @@
 :root {
 	--primary-color: #aa3333;
 	--secondary-color: #393a73;
+	--secondary-color-light: #a4a5d2;
 	--accent-color: #f8f3e6;
 	--white: #fff;
-	--large-font-size: 3rem;
+	--xl-font-size: 3rem;
+	--large-font-size: 2rem;
 	--medium-font-size: 1.5rem;
 	--small-font-size: 1rem;
+	--xs-font-size: 0.8rem;
 }
 
 * {
@@ -22,7 +25,8 @@ body {
 /* Custom Styles */
 
 .main-header .navbar,
-main .jumbotron {
+main .jumbotron,
+.main-footer {
 	background-color: var(--primary-color);
 }
 
@@ -31,7 +35,8 @@ main .jumbotron h1,
 main .jumbotron .name,
 main .jumbotron .details,
 .content-section .bio,
-.card .card-body .card-text {
+.card .card-body .card-text,
+.main-footer p {
 	font-weight: 300;
 }
 
@@ -41,7 +46,8 @@ main .jumbotron .details,
 }
 
 .main-header .navbar-brand,
-main .jumbotron {
+main .jumbotron,
+.main-footer {
 	color: var(--accent-color);
 }
 
@@ -53,7 +59,7 @@ main .jumbotron {
 }
 
 main .jumbotron h1 {
-	font-size: var(--large-font-size);
+	font-size: var(--xl-font-size);
 }
 
 .profile-img {
@@ -106,7 +112,7 @@ main .jumbotron h1 {
 
 .card .card-img-top {
 	width: 100%;
-	height: 30%;
+	height: 32%;
 	object-fit: cover;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
@@ -130,6 +136,7 @@ main .jumbotron h1 {
 }
 .card .card-body a {
 	width: 100%;
+	font-weight: 500;
 }
 .card .card-body .visit {
 	border-color: var(--primary-color);
@@ -146,6 +153,24 @@ main .jumbotron h1 {
 .card .card-body .repo:hover {
 	background-color: var(--secondary-color);
 	color: var(--white);
+}
+
+.main-footer p {
+	margin-bottom: 0;
+}
+
+.main-footer p,
+.main-footer a {
+	font-size: var(--xs-font-size);
+}
+
+.main-footer a {
+	color: var(--secondary-color-light);
+	text-decoration: none;
+}
+
+.main-footer .icon {
+	fill: var(--accent-color);
 }
 
 /* Animation Keyframes */
