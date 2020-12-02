@@ -250,8 +250,25 @@ main .jumbotron .name {
 	.card {
 		min-height: 525px;
 	}
+
 	.card .card-img-top {
 		height: 40%;
+	}
+
+	/* Footer Styles */
+
+	.main-footer p,
+	.main-footer a {
+		font-size: var(--small-font-size);
+	}
+
+	.social-icons {
+		width: 50%;
+		margin: auto;
+	}
+
+	.icon {
+		height: var(--large-font-size);
 	}
 }
 
