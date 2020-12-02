@@ -173,6 +173,10 @@ main .jumbotron .name {
 	color: var(--white);
 }
 
+.main-footer {
+	padding: 1.5rem 0;
+}
+
 .main-footer p {
 	margin-bottom: 0;
 }
@@ -194,6 +198,7 @@ main .jumbotron .name {
 
 .main-footer .icon {
 	fill: var(--accent-color);
+	height: var(--large-font-size);
 }
 
 .main-footer a:hover,
@@ -276,11 +281,8 @@ main .jumbotron .name {
 
 	.social-icons {
 		width: 50%;
+		max-width: 400px;
 		margin: auto;
-	}
-
-	.icon {
-		height: var(--large-font-size);
 	}
 }
 
@@ -303,6 +305,12 @@ main .jumbotron .name {
 
 	.card {
 		min-height: 535px;
+	}
+
+	/* Footer Styles */
+
+	.main-footer {
+		padding: 2rem 0;
 	}
 
 	.social-icons {
