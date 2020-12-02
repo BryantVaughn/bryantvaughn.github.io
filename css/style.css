@@ -12,6 +12,21 @@
 	--medium-font-size: 1.5rem;
 	--small-font-size: 1rem;
 	--xs-font-size: 0.8rem;
+
+	/* Icon Colors */
+	--linkedin-color: #0077b5;
+	--github-color: #181717;
+	--codepen-color: #000;
+	--twitter-color: #1da1f2;
+	--js-color: #f7df1e;
+	--react-color: #61dafb;
+	--vue-color: #4fc08d;
+	--html-color: #e34f26;
+	--css-color: #1572b6;
+	--sass-color: #c69;
+	--vuetify-color: #1867c0;
+	--svg-color: #ffb13b;
+	--vscode-color: #007acc;
 }
 
 * {
@@ -100,7 +115,7 @@ main .jumbotron .name {
 	color: var(--secondary-color);
 }
 
-.content-section:first-of-type {
+.content-section:nth-of-type(-n + 2) {
 	border-bottom: 1px solid var(--secondary-color-light);
 }
 
@@ -171,6 +186,22 @@ main .jumbotron .name {
 .card .card-body .repo:hover {
 	background-color: var(--secondary-color);
 	color: var(--white);
+}
+
+.content-section .skill .skill-icon {
+	fill: var(--primary-color);
+	height: 64px;
+	width: 64px;
+}
+
+.content-section .skill {
+	margin-bottom: 0.5rem;
+}
+
+.content-section .skill .skill-desc {
+	font-size: var(--small-font-size);
+	font-weight: 300;
+	color: var(--secondary-color);
 }
 
 .main-footer {
@@ -245,17 +276,22 @@ main .jumbotron .name {
 		margin: 1.5rem auto;
 	}
 
-	.content-section:first-of-type {
+	.content-section:nth-of-type(-n + 2) {
 		border: none;
 	}
 
 	#about {
-		background-color: var(--white);
 		padding-top: 1.5rem;
 	}
 
 	#about,
-	.card {
+	#skills {
+		background-color: var(--white);
+	}
+
+	#about,
+	.card,
+	#skills {
 		box-shadow: 0 3px 5px var(--secondary-color-light);
 	}
 
@@ -263,17 +299,18 @@ main .jumbotron .name {
 		font-size: var(--small-font-size);
 	}
 
-	#about .resume-title {
-		display: none;
-	}
-
 	/* Project Styles */
 	.card {
 		min-height: 525px;
 	}
 
-	/* Footer Styles */
+	/* Skills Styles */
+	.content-section .skill .skill-icon {
+		height: 88px;
+		width: 88px;
+	}
 
+	/* Footer Styles */
 	.main-footer p,
 	.main-footer a {
 		font-size: var(--small-font-size);
@@ -307,6 +344,16 @@ main .jumbotron .name {
 		min-height: 535px;
 	}
 
+	/* Skills Styles */
+	.content-section .skill {
+		margin-bottom: 1rem;
+	}
+
+	.content-section .skill .skill-icon {
+		height: 96px;
+		width: 96px;
+	}
+
 	/* Footer Styles */
 
 	.main-footer {
@@ -321,6 +368,19 @@ main .jumbotron .name {
 @media (min-width: 1200px) {
 	.card {
 		min-height: 530px;
+	}
+
+	.content-section .skill {
+		margin-bottom: 1.25rem;
+	}
+
+	.content-section .skill .skill-icon {
+		height: 104px;
+		width: 104px;
+	}
+
+	.content-section .skill .skill-desc {
+		font-size: var(--medium-font-size);
 	}
 }
 
