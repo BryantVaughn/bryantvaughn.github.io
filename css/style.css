@@ -14,10 +14,6 @@
 	--xs-font-size: 0.8rem;
 
 	/* Icon Colors */
-	--linkedin-color: #0077b5;
-	--github-color: #181717;
-	--codepen-color: #000;
-	--twitter-color: #1da1f2;
 	--js-color: #f7df1e;
 	--react-color: #61dafb;
 	--vue-color: #4fc08d;
@@ -189,9 +185,42 @@ main .jumbotron .name {
 }
 
 .content-section .skill .skill-icon {
-	fill: var(--primary-color);
 	height: 64px;
 	width: 64px;
+	opacity: 0.8;
+	transition: 0.3s ease-out;
+}
+.content-section .skill .skill-icon:hover {
+	opacity: 1;
+	transform: scale(1.1);
+}
+
+#js {
+	fill: var(--js-color);
+}
+#react {
+	fill: var(--react-color);
+}
+#vue {
+	fill: var(--vue-color);
+}
+#html {
+	fill: var(--html-color);
+}
+#css {
+	fill: var(--css-color);
+}
+#sass {
+	fill: var(--sass-color);
+}
+#vuetify {
+	fill: var(--vuetify-color);
+}
+#svg {
+	fill: var(--svg-color);
+}
+#vscode {
+	fill: var(--vscode-color);
 }
 
 .content-section .skill {
