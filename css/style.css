@@ -40,6 +40,91 @@ body {
 
 /* Custom Styles */
 
+.overlay {
+	position: fixed;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding-top: 10vh;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 50;
+}
+
+.overlay-data {
+	width: 95%;
+	height: 97%;
+	padding: 0.75rem 0.5rem;
+	z-index: 100;
+	background-color: var(--white);
+	border-radius: 5px;
+	flex-direction: column;
+	align-items: center;
+}
+
+.overlay-data #close {
+	color: var(--secondary-color);
+	align-self: flex-end;
+	margin: 0;
+}
+
+.overlay-data .project-img {
+	width: 85%;
+}
+
+.overlay-data .project-title {
+	font-size: var(--medium-font-size);
+	color: var(--primary-color);
+	margin: 0.5rem 0;
+}
+
+.overlay-data .project-desc {
+	font-size: var(--small-font-size);
+	color: var(--secondary-color);
+	margin-bottom: 0;
+}
+
+.overlay-data .visit,
+.overlay-data .repo {
+	color: var(--white);
+	width: 100%;
+	transition: 0.2s ease-out;
+}
+
+.overlay-data .visit {
+	background-color: var(--primary-color);
+	border-color: var(--primary-color);
+	margin-top: auto;
+}
+.overlay-data .visit:hover {
+	background-color: var(--white);
+	color: var(--primary-color);
+}
+
+.overlay-data .repo {
+	background-color: var(--secondary-color);
+	border-color: var(--secondary-color);
+	margin-top: 0.5rem;
+}
+.overlay-data .repo:hover {
+	background-color: var(--white);
+	color: var(--secondary-color);
+}
+
+.overlay,
+.overlay-data,
+.overlay-data .skills-icons {
+	display: none;
+}
+
+.overlay,
+.card {
+	cursor: pointer;
+}
+
 .main-header .navbar,
 main .jumbotron,
 .main-footer {
@@ -269,6 +354,22 @@ main .jumbotron .name {
 /* Media Queries */
 
 @media (min-width: 768px) {
+	/* Overlay Styles */
+	.overlay-data {
+		width: 50%;
+		height: 75%;
+	}
+
+	.overlay-data .skills-icons {
+		margin-top: auto;
+		display: flex;
+	}
+
+	.overlay-data .skill svg {
+		width: 48px;
+		height: 48px;
+	}
+
 	/* Jumbotron Styles */
 	main .jumbotron {
 		min-height: 900px;
@@ -353,6 +454,23 @@ main .jumbotron .name {
 }
 
 @media (min-width: 1024px) {
+	/* Overlay Styles */
+	.overlay-data {
+		width: 45%;
+		height: 75%;
+		padding: 0.5rem;
+	}
+
+	.overlay-data .skills-icons {
+		margin-top: auto;
+		display: flex;
+	}
+
+	.overlay-data .skill svg {
+		width: 48px;
+		height: 48px;
+	}
+
 	/* Jumbotron Styles */
 	main .jumbotron .profile-img {
 		height: 300px;
