@@ -10,16 +10,18 @@ const svgs = {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-	// Gather DOM elements
+	// Gather DOM elements and globals
 	const projectCards = document.querySelectorAll('.card');
 	const overlay = document.querySelector('.overlay');
 	const overlayData = document.querySelector('.overlay-data');
+	let overlayView;
 
 	// Helper functions
 	function buildOverlay(projectCard) {
 		const id = projectCard.id;
 		const projectArr = projects.filter((project) => project.id == id);
 		const projectData = projectArr[0];
+		overlayView = parseInt(projectData.id);
 
 		const closeBtn = createElement('button', 'btn btn-sm');
 		closeBtn.id = 'close';
@@ -86,6 +88,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	function clearOverlayData() {
 		overlayData.innerHTML = '';
+		overlayView = null;
+	}
+
+	function scrollOverlay(direction) {
+		const projectCount = projects.length;
+		let idx = overlayView - 1;
+		clearOverlayData();
+
+		if (direction === 'left') {
+			if (idx === 0) idx = projectCount;
+			buildOverlay(projects[(idx - 1) % projectCount]);
+		} else {
+			buildOverlay(projects[(idx + 1) % projectCount]);
+		}
 	}
 
 	// Event callbacks
@@ -104,6 +120,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		const { target } = evt;
 		if (target.className === 'overlay' || target.id === 'close') {
 			closeOverlay();
+		} else if (target.id === 'left' || target.id === 'right') {
+			scrollOverlay(target.id);
 		}
 	}
 
