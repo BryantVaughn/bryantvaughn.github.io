@@ -213,10 +213,21 @@ main .jumbotron .name {
 	text-align: center;
 	background-color: var(--white);
 	color: var(--secondary-color);
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
 }
 
 .content-section:nth-of-type(-n + 2) {
 	border-bottom: 1px solid var(--secondary-color-light);
+}
+
+.main-content #about {
+	padding-bottom: 3rem;
+}
+
+.main-content #about,
+.main-content #skills {
+	padding-top: 3rem;
 }
 
 .section-title {
@@ -429,6 +440,8 @@ main .jumbotron .name {
 	/* Main Content */
 	main .main-content {
 		background-color: var(--accent-color);
+		padding-top: 2rem;
+		padding-bottom: 2rem;
 	}
 
 	.content-section .bio,
@@ -472,6 +485,10 @@ main .jumbotron .name {
 	}
 
 	/* Footer Styles */
+	.main-footer {
+		padding: 2rem 0;
+	}
+
 	.main-footer p,
 	.main-footer a {
 		font-size: var(--small-font-size);
@@ -492,12 +509,20 @@ main .jumbotron .name {
 	}
 
 	/* Jumbotron Styles */
+	main .jumbotron {
+		padding-top: 5rem;
+	}
+
 	main .jumbotron .profile-img {
 		height: 300px;
 		width: 300px;
 	}
 
 	/* Main Content */
+	main .main-content {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+	}
 
 	.section-title {
 		font-size: var(--large-font-size);
@@ -524,7 +549,7 @@ main .jumbotron .name {
 	/* Footer Styles */
 
 	.main-footer {
-		padding: 2rem 0;
+		padding: 3rem 0;
 	}
 
 	.social-icons {
@@ -550,6 +575,9 @@ main .jumbotron .name {
 
 	.content-section .skill {
 		margin-bottom: 1.25rem;
+	}
+	.content-section .skill:last-of-type {
+		margin-bottom: 2.5rem;
 	}
 
 	.content-section .skill .skill-icon {
