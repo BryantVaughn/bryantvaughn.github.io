@@ -63,6 +63,7 @@ body {
 	border-radius: 5px;
 	flex-direction: column;
 	align-items: center;
+	cursor: default;
 }
 
 .overlay-data #close {
@@ -121,6 +122,7 @@ body {
 }
 
 .overlay,
+.overlay-data #close,
 .card {
 	cursor: pointer;
 }
@@ -461,16 +463,6 @@ main .jumbotron .name {
 		padding: 0.5rem;
 	}
 
-	.overlay-data .skills-icons {
-		margin-top: auto;
-		display: flex;
-	}
-
-	.overlay-data .skill svg {
-		width: 48px;
-		height: 48px;
-	}
-
 	/* Jumbotron Styles */
 	main .jumbotron .profile-img {
 		height: 300px;
@@ -513,6 +505,18 @@ main .jumbotron .name {
 }
 
 @media (min-width: 1200px) {
+	/* Overlay Styles */
+	.overlay-data {
+		width: 37%;
+		height: 75%;
+		padding: 0.75rem;
+		max-width: 440px;
+	}
+
+	.overlay-data .project-img {
+		max-width: 350px;
+	}
+
 	.card {
 		min-height: 530px;
 	}
