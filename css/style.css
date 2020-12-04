@@ -366,6 +366,11 @@ main .jumbotron .name {
 	text-decoration: none;
 }
 
+.social-icons.row {
+	margin-right: unset;
+	margin-left: unset;
+}
+
 .main-footer a,
 .main-footer .icon {
 	transition: opacity 0.3s ease-out;
