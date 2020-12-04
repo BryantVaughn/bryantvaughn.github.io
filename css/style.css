@@ -22,6 +22,7 @@
 	--sass-color: #c69;
 	--vuetify-color: #1867c0;
 	--svg-color: #ffb13b;
+	--bootstrap-color: #563d7c;
 	--vscode-color: #007acc;
 }
 
@@ -332,6 +333,9 @@ main .jumbotron .name {
 }
 #svg {
 	fill: var(--svg-color);
+}
+#bootstrap {
+	fill: var(--bootstrap-color);
 }
 #vscode {
 	fill: var(--vscode-color);
