@@ -367,8 +367,8 @@ main .jumbotron .name {
 }
 
 .social-icons.row {
-	margin-right: unset;
-	margin-left: unset;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .main-footer a,
