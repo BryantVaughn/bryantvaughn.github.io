@@ -5,6 +5,7 @@
 	--secondary-color: #393a73;
 	--secondary-color-light: #a4a5d2;
 	--accent-color: #f8f3e6;
+	--link-color: #0ff;
 	--white: #fff;
 	--xxl-font-size: 4rem;
 	--xl-font-size: 3rem;
@@ -365,7 +366,8 @@ main .jumbotron .name {
 }
 
 .main-footer a {
-	color: var(--secondary-color-light);
+	color: var(--link-color);
+	font-weight: 500;
 	text-decoration: none;
 }
 
