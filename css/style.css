@@ -16,6 +16,7 @@
 
 	/* Icon Colors */
 	--js-color: #f7df1e;
+	--ts-color: #3178c6;
 	--react-color: #61dafb;
 	--vue-color: #4fc08d;
 	--html-color: #e34f26;
@@ -313,6 +314,9 @@ main .jumbotron .name {
 
 #js {
 	fill: var(--js-color);
+}
+#ts {
+	fill: var(--ts-color);
 }
 #react {
 	fill: var(--react-color);
